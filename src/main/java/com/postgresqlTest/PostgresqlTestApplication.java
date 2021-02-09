@@ -36,17 +36,17 @@ public class PostgresqlTestApplication implements CommandLineRunner {
 		/*
 		 *  Drop Rider Table
 		 */
-//		jdbcTemplate.execute("DROP TABLE IF EXISTS rider;");
+		jdbcTemplate.execute("DROP TABLE IF EXISTS rider;");
 		
 		/*
 		 * #############################################################################
 		 */
 		
 		/* Created Rider Table */
-//		jdbcTemplate.execute("CREATE TABLE rider(" + "id SERIAL," + " name VARCHAR(255)," + " joined_date TIMESTAMP,"
-//				+ "  gender VARCHAR(255)," + "  country VARCHAR(255)," + "  phone_no VARCHAR(12)," + "  dob Date,"+ "  current_payment_type VARCHAR(255)," + "  current_payement_ac VARCHAR(255)," + " PRIMARY KEY (phone_no) )");
-//
-//		System.out.println("Rider Table Created");
+		jdbcTemplate.execute("CREATE TABLE rider(" + "id SERIAL," + " name VARCHAR(255)," + " joined_date TIMESTAMP,"
+				+ "  gender VARCHAR(255)," + "  country VARCHAR(255)," + "  phone_no VARCHAR(12)," + "  dob VARCHAR(255),"+ "  current_payment_type VARCHAR(255)," + "  current_payement_ac VARCHAR(255)," + " PRIMARY KEY (phone_no) )");
+
+		System.out.println("Rider Table Created");
 		
 		/*
 		 * #############################################################################
